@@ -1,0 +1,65 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+export default function Intro() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+        else setInView(false);
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`bg-[color:var(--color-black)] overflow-hidden relative w-full h-screen pt-60 text-white ${
+        inView ? "motion" : ""
+      }`}
+    >
+      <div className="text-9xl font-light leading-[1.2] ml-15 mb-40 inline-block overflow-hidden">
+        <p>
+          <span className="block animate-textAni">FE Developer</span>
+        </p>
+        <p>
+          <span className="block animate-textAni animate-duration-[1.7s] font-cormorant">
+            Hyeju Hyun
+          </span>
+        </p>
+        <p>
+          <span className="block animate-textAni animate-duration-[1.5s]">
+            Portfolio
+          </span>
+        </p>
+      </div>
+
+      <div className="svgAni absolute top-[25%] right-0 w-[55%] rotate-[-30deg]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1668.87 818.85">
+          <path
+            id="svgAni01"
+            d="M222.5,549.5s281-261,257-380S130.87,682.62,187.18,689.56,348.5,500.5,370.5,518.5s-48,124,4,123c0,0,87,19,195-78"
+          />
+          <path
+            id="svgAni02"
+            d="M606.5,554.5s-45-12-43,31,58-50,58-50-32,69-11,89,80,43,206-61c0,0,3-5,22-32s-116,224,193,39c0,0,329-338,265-404s-402,608-296,670,492-305,492-305"
+          />
+          <path
+            id="svgAni03"
+            d="M1462.5,570.5s46-9,43-30-104,52-21,84,195-70,195-70l-6-11s21-7-6,61,76-74,91-61-71,372-211,419-6-194,297-405"
+          />
+          <path id="svgAni04" d="M865.5,480.5s-18,4-12,10,26-5,12-7" />
+        </svg>
+      </div>
+
+      <div className="fixed left-[60px] bottom-[40px]">Scroll Down</div>
+    </section>
+  );
+}
