@@ -1,10 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Splitting from "splitting";
+import "splitting/dist/splitting.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollDown, setScrollDown] = useState(false);
+
+  useEffect(() => {
+    Splitting();
+  }, []);
 
   useEffect(() => {
     let prevScroll = 0;
@@ -32,17 +38,24 @@ export default function Header() {
         <span className="font-cormorant">hxezu</span>Portfolio
       </Link>
 
-      <nav className="hidden md:block">
-        <ul className="flex gap-6 text-lg">
-          <li>
-            <Link href="#about">About</Link>
-          </li>
-          <li>
-            <Link href="#project">Project</Link>
-          </li>
-          <li>
-            <Link href="#project">Contact</Link>
-          </li>
+      <nav className="gnb hidden md:block">
+        <ul className="flex gap-8">
+          {["About", "Projects", "Contact"].map((item, idx) => (
+            <li key={idx}>
+              <a href="#" className="relative inline-block overflow-hidden">
+                {item.split("").map((char, i) => (
+                  <span
+                    key={i}
+                    className="char relative inline-block"
+                    style={{ "--char-index": i } as React.CSSProperties}
+                    data-char={char}
+                  >
+                    {char}
+                  </span>
+                ))}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
