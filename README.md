@@ -1,6 +1,7 @@
 # 현혜주 – 프론트엔드 개발자 포트폴리오
 
-![Portfolio Preview](./screenshot.png) <!-- 실제 스크린샷 이미지 파일 경로로 변경 예정 -->
+![Portfolio Preview](https://github.com/user-attachments/assets/1491add2-29fd-4f95-b875-f6a2215ba6d6)
+
 
 > Next.js와 TailwindCSS를 활용해 제작한 인터랙티브 포트폴리오입니다.
 
