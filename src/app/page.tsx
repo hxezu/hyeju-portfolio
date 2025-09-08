@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
-import Profile from "@/components/Profile";
+import Profile from "@/components/profile/Profile";
 
 export default function page() {
   return (
