@@ -56,8 +56,9 @@
 :root {
   --color-white: #f9f9fb;
   --color-black: #171717;
-  --color-gray-200: #202632;
-  --color-gray-100: #5f636d;
+  --color-gray-300: #202632;
+  --color-gray-200: #5f636d;
+  --color-gray-100: #dbdbdb;
 }
 
 body {
@@ -99,27 +100,6 @@ body {
 
 .gnb ul li a:hover .char::after {
   transform: translateY(-100%);
-}
-
-@keyframes textAni {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-    transform: translate3d(0, -90px, 0) skewY(-10deg);
-    transform-origin: top left;
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) skewY(0deg);
-  }
-}
-
-.animate-textAni {
-  animation-name: textAni;
-  animation-duration: 1.8s;
-  animation-fill-mode: forwards;
 }
 
 #svgAni01 {
