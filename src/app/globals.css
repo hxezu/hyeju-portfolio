@@ -64,6 +64,41 @@ body {
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
 }
 
+.gnb ul li a .char {
+  position: relative;
+  display: inline-block;
+  color: transparent; /* 항상 투명 처리 */
+}
+
+.gnb ul li a .char::before,
+.gnb ul li a .char::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  color: #fff;
+  content: attr(data-char);
+  transition: transform 0.35s, opacity 0.35s;
+  transition-delay: calc(30ms * var(--char-index));
+}
+
+.gnb ul li a .char::before {
+  transform: translateY(100%);
+}
+
+.gnb ul li a .char::after {
+  transform: translateY(0%);
+}
+
+.gnb ul li a:hover .char::before {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.gnb ul li a:hover .char::after {
+  transform: translateY(-100%);
+}
+
 @keyframes textAni {
   0% {
     opacity: 0;
