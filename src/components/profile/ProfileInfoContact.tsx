@@ -12,7 +12,7 @@ export default function ProfileInfoContact() {
   return (
     <div className="flex gap-10">
       <ProfileDetailHeader title="CONTACTS" />
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-2">
         {contacts.map((contact, i) => (
           <ProfileDetailItem
             tag={contact.tag}

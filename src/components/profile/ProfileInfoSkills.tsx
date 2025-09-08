@@ -26,7 +26,7 @@ export default function ProfileInfoSkills() {
   return (
     <div className="flex gap-10">
       <ProfileDetailHeader title="SKILLS" />
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         {skills.map((skill, i) => (
           <div key={i} className="w-6 h-6 relative">
             <Image

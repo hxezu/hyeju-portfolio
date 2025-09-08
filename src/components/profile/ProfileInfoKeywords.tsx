@@ -1,7 +1,7 @@
 import KeywordItem from "./KeywordItem";
 import ProfileDetailHeader from "./ProfileDetailHeader";
 
-const keywords = ["감각적인", "다재다능한", "책임감있는"];
+const keywords = ["감각적인", "다재다능한", "책임감있는", "열정적인"];
 export default function ProfileInfoKeywords() {
   return (
     <>

@@ -18,7 +18,7 @@ export default function ProfileInfoTools() {
   return (
     <div className="flex gap-10">
       <ProfileDetailHeader title="TOOLS" />
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         {tools.map((tool, i) => (
           <div key={i} className="w-6 h-6 relative">
             <Image

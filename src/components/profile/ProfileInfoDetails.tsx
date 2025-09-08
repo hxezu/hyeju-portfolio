@@ -6,7 +6,7 @@ import ProfileInfoTools from "./ProfileInfoTools";
 
 export default function ProfileInfoDetails() {
   return (
-    <div className="w-[60%] flex-1 space-y-10">
+    <div className="w-[50%] flex-1 space-y-10">
       <ProfileInfoContact />
       <ProfileInfoEdu />
       <ProfileInfoKeywords />

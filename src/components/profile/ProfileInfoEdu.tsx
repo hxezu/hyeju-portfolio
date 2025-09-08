@@ -12,7 +12,7 @@ export default function ProfileInfoEdu() {
   return (
     <div className="flex gap-10">
       <ProfileDetailHeader title="EDUCATION" />
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-2">
         {educations.map((education, i) => (
           <ProfileDetailItem
             tag={education.tag}
