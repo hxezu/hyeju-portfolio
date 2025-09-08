@@ -21,11 +21,11 @@ export default function Intro() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-[color:var(--color-black)] overflow-hidden relative w-full h-screen pt-60 text-white ${
+      className={`bg-[color:var(--color-black)] flex items-center pl-15 overflow-hidden relative w-full h-screen  text-white ${
         inView ? "motion" : ""
       }`}
     >
-      <div className="text-9xl font-light leading-[1.2] ml-15 mb-40 inline-block overflow-hidden">
+      <div className="text-9xl font-light leading-[1.2] inline-block overflow-hidden">
         <p>
           <span className="block animate-textAni">FE Developer</span>
         </p>
@@ -42,7 +42,7 @@ export default function Intro() {
       </div>
 
       <div className="svgAni absolute top-[25%] right-0 w-[55%] rotate-[-30deg]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1668.87 818.85">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-300 -300 2300 1500">
           <path
             id="svgAni01"
             d="M222.5,549.5s281-261,257-380S130.87,682.62,187.18,689.56,348.5,500.5,370.5,518.5s-48,124,4,123c0,0,87,19,195-78"

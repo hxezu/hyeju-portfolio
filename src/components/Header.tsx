@@ -34,11 +34,11 @@ export default function Header() {
         scrollDown ? "translate-y-[-100%]" : " translate-y-0"
       }`}
     >
-      <Link href="/" className="text-2xl">
+      <Link href="/">
         <span className="font-cormorant">hxezu</span>Portfolio
       </Link>
 
-      <nav className="gnb hidden md:block">
+      <nav className="gnb hidden md:block text-sm">
         <ul className="flex gap-8">
           {["About", "Projects", "Contact"].map((item, idx) => (
             <li key={idx}>
