@@ -27,17 +27,13 @@ export default function Intro() {
     >
       <div className="text-9xl font-light leading-[1.2] inline-block overflow-hidden">
         <p>
-          <span className="block animate-textAni">FE Developer</span>
+          <span>FE Developer</span>
         </p>
         <p>
-          <span className="block animate-textAni animate-duration-[1.7s] font-cormorant">
-            Hyeju Hyun
-          </span>
+          <span className="font-cormorant">Hyeju Hyun</span>
         </p>
         <p>
-          <span className="block animate-textAni animate-duration-[1.5s]">
-            Portfolio
-          </span>
+          <span>Portfolio</span>
         </p>
       </div>
 
@@ -63,7 +59,7 @@ export default function Intro() {
         </svg>
       </div>
 
-      <div className="fixed left-[60px] bottom-[40px]">Scroll Down</div>
+      <div className="absolute left-[60px] bottom-[40px]">Scroll Down</div>
     </section>
   );
 }
