@@ -41,8 +41,12 @@ export default function Intro() {
         </p>
       </div>
 
-      <div className="svgAni absolute top-[25%] right-0 w-[55%] rotate-[-30deg]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-300 -300 2300 1500">
+      <div className="svgAni absolute top-[25%] right-[5%] w-[55%] rotate-[-30deg]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1668.87 818.85"
+          overflow="visible"
+        >
           <path
             id="svgAni01"
             d="M222.5,549.5s281-261,257-380S130.87,682.62,187.18,689.56,348.5,500.5,370.5,518.5s-48,124,4,123c0,0,87,19,195-78"

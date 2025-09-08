@@ -1,16 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollDown, setScrollDown] = useState(false);
-
-  useEffect(() => {
-    Splitting();
-  }, []);
 
   useEffect(() => {
     let prevScroll = 0;
@@ -35,7 +30,7 @@ export default function Header() {
       }`}
     >
       <Link href="/">
-        <span className="font-cormorant">hxezu</span>Portfolio
+        <span className="font-cormorant">hyeju</span>Portfolio
       </Link>
 
       <nav className="gnb hidden md:block text-sm">
