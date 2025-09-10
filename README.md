@@ -1,6 +1,6 @@
 # 현혜주 – 프론트엔드 개발자 포트폴리오
 
-[🌐 배포 주소](www.hxezu.com)
+[🌐 배포 주소](https://www.hxezu.com/)
 
 ![Portfolio Preview](https://github.com/user-attachments/assets/1491add2-29fd-4f95-b875-f6a2215ba6d6)
 
