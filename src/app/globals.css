@@ -5,6 +5,33 @@
   font-family: "Cormorant Infant", serif;
 }
 
+.font-yapari {
+  font-family: "Yapari", serif;
+}
+
+.font-tttogether {
+  font-family: "TTTogether", sans-serif;
+}
+
+.font-monument {
+  font-family: "Monument", sans-serif;
+}
+
+@font-face {
+  font-family: "Yapari";
+  src: url("/fonts/YapariTrial-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TTTogether";
+  src: url("/fonts/TTTogether.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url("/fonts/MonumentExtended-Regular.otf") format("opentype");
+}
+
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
