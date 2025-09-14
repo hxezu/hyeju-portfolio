@@ -33,9 +33,9 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ id }: { id?: string }) {
   return (
-    <section>
+    <section id={id}>
       {projects.map((project, i) => (
         <div key={i} className="h-screen">
           <ProjectTumbnail
