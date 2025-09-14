@@ -38,7 +38,7 @@ export default function Header() {
           {["About", "Projects", "Contact"].map((item, idx) => (
             <li key={idx}>
               <a
-                href="#"
+                href={`#${item.toLowerCase()}`}
                 className="hover-target cursor-none relative inline-block overflow-hidden"
               >
                 {item.split("").map((char, i) => (

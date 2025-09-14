@@ -1,8 +1,8 @@
-export default function Contact() {
+export default function Contact({ id }: { id?: string }) {
   return (
     <section
       className="h-screen bg-[color:var(--color-black)] text-[color:var(--color-white)] relative"
-      id="contact"
+      id={id}
     >
       <div className="flex flex-col pl-20 pt-30 gap-10">
         <div className="text-9xl ">
