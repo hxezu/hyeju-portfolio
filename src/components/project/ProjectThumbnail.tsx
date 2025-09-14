@@ -37,12 +37,15 @@ export default function ProjectTumbnail({
           <p className="text-base whitespace-pre-line font-light">
             {description}
           </p>
-          <button className="flex items-center text-xs gap-1 cursor-pointer hover:font-semibold">
+          <button className="flex items-center text-xs gap-1 hover-target cursor-none hover:font-semibold">
             자세히 보기 <ArrowRight strokeWidth={1.8} size={14} />
           </button>
         </div>
 
-        <Link href={`/projects/${id}`} className="flex flex-1">
+        <Link
+          href={`/projects/${id}`}
+          className="hover-target cursor-none flex flex-1"
+        >
           <Image src={imgSrc} alt={`${prjName} 이미지`} />
         </Link>
       </div>

@@ -29,7 +29,7 @@ export default function Header() {
         scrollDown ? "translate-y-[-100%]" : " translate-y-0"
       }`}
     >
-      <Link href="/">
+      <Link href="/" className="hover-target cursor-none">
         <span className="font-cormorant">hyeju</span>Portfolio
       </Link>
 
@@ -37,7 +37,10 @@ export default function Header() {
         <ul className="flex gap-8">
           {["About", "Projects", "Contact"].map((item, idx) => (
             <li key={idx}>
-              <a href="#" className="relative inline-block overflow-hidden">
+              <a
+                href="#"
+                className="hover-target cursor-none relative inline-block overflow-hidden"
+              >
                 {item.split("").map((char, i) => (
                   <span
                     key={i}
