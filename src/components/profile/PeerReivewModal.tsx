@@ -1,7 +1,6 @@
 import { ArrowUpRight, X } from "lucide-react";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogTitle,
   DialogTrigger,
