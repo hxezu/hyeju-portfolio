@@ -20,12 +20,6 @@ export default function PeerReivewModal() {
       </DialogTrigger>
 
       <DialogContent className="fixed left-1/2 top-1/2 w-[50vw] -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-6 shadow-lg">
-        <DialogClose asChild>
-          <button className="hover-target cursor-none absolute top-2 right-2 z-50 p-2 text-gray-500 rounded-lg hover:bg-[color:#f0f0f0] ">
-            <X size={16} />
-          </button>
-        </DialogClose>
-
         <div className="p-4">
           <DialogTitle>Peer Review</DialogTitle>
         </div>
