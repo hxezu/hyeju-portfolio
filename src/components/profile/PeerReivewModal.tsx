@@ -5,7 +5,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
-import HaileySvg from "../HaileySvg";
 import { reviews } from "@/data/reviews";
 import PeerReviewCard from "./PeerReviewCard";
 
@@ -21,14 +20,14 @@ export default function PeerReivewModal() {
         </button>
       </DialogTrigger>
 
-      <DialogContent className="fixed left-1/2 top-1/2 w-[60vw] h-[80vh] -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg bg-black overflow-hidden">
-        <div className="absolute inset-0 w-full h-full -left-120 -top-20">
+      <DialogContent className="fixed left-1/2 top-1/2 w-[60vw] h-[80vh] -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg bg-[#F9F9FB] overflow-hidden">
+        {/* <div className="absolute inset-0 w-full h-full -left-120 -top-20">
           <HaileySvg className=" w-[2000px] h-[800px] -rotate-15 overflow-visible opacity-80" />
-        </div>
+        </div> */}
 
         <div className="relative z-10 h-full overflow-y-auto p-10">
           <DialogTitle></DialogTitle>
-          <div className="space-y-4">
+          <div className="space-y-8">
             {reviews.map((review) => (
               <PeerReviewCard key={review.id} review={review} />
             ))}
