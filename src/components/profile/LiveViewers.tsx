@@ -1,12 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
+import { io, Socket } from "socket.io-client";
 
 export default function LiveViewers() {
   const [viewers, setViewers] = useState(0);
 
   useEffect(() => {
-    const socket = io("/", { path: "/api/socket" });
+    const socket: Socket = io("https://hyeju-portfolio.onrender.com", {
+      transports: ["websocket"],
+    });
     socket.on("updateViewers", (count: number) => {
       setViewers(count);
     });
