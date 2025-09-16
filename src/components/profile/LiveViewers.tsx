@@ -6,7 +6,7 @@ export default function LiveViewers() {
   const [viewers, setViewers] = useState(0);
 
   useEffect(() => {
-    const socket = io("http://localhost:3001");
+    const socket = io("/", { path: "/api/socket" });
     socket.on("updateViewers", (count: number) => {
       setViewers(count);
     });
