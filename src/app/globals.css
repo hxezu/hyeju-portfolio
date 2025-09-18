@@ -16,8 +16,8 @@
   font-family: "TTTogether", sans-serif;
 }
 
-.font-monument {
-  font-family: "Monument", sans-serif;
+.font-electrolize {
+  font-family: "Electrolize", sans-serif;
 }
 
 @font-face {
@@ -31,8 +31,8 @@
 }
 
 @font-face {
-  font-family: "Monument";
-  src: url("/fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-family: "Electrolize";
+  src: url("/fonts/Electrolize-Regular.ttf") format("truetype");
 }
 
 @font-face {
