@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function Intro() {
+export default function Intro({ className }: { className?: string }) {
   const sectionRef = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
 
@@ -21,7 +21,7 @@ export default function Intro() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-[color:var(--color-black)] flex items-center pl-15 overflow-hidden relative w-full h-screen  text-white ${
+      className={`${className} bg-[color:var(--color-black)] flex items-center pl-15 overflow-hidden relative w-full h-screen  text-white ${
         inView ? "motion" : ""
       }`}
     >

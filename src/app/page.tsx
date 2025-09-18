@@ -7,12 +7,12 @@ import Projects from "@/components/Projects";
 
 export default function HomePage() {
   return (
-    <main className="cursor-none">
+    <main className="cursor-none h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
       <CustomCursor />
-      <Intro />
-      <Profile id="about" />
-      <Projects id="projects" />
-      <Contact id="contact" />
+      <Intro className="snap-start" />
+      <Profile id="about" className="snap-start" />
+      <Projects id="projects" className="snap-start" />
+      <Contact id="contact" className="snap-start" />
     </main>
   );
 }

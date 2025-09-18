@@ -33,11 +33,20 @@ const projects = [
   },
 ];
 
-export default function Projects({ id }: { id?: string }) {
+export default function Projects({
+  id,
+  className,
+}: {
+  id?: string;
+  className?: string;
+}) {
   return (
-    <section id={id}>
+    <section
+      id={id}
+      className={`${className} snap-y snap-mandatory overflow-y-scroll scroll-smooth h-screen`}
+    >
       {projects.map((project, i) => (
-        <div key={i} className="h-screen">
+        <div key={i} className="h-screen snap-start">
           <ProjectTumbnail
             index={i + 1}
             id={project.id}
