@@ -3,5 +3,5 @@ export default function ProjectsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="bg-black min-h-screen">{children}</div>;
+  return <div className=" min-h-screen">{children}</div>;
 }

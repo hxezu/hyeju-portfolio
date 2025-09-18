@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <header
-      className={`cursor-none fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-transform text-[color:var(--color-white)] font-light ${
+      className={`cursor-none fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-transform text-white font-light ${
         scrollDown ? "translate-y-[-100%]" : " translate-y-0"
       }`}
     >

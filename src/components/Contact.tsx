@@ -7,7 +7,7 @@ export default function Contact({
 }) {
   return (
     <section
-      className={`${className} h-screen bg-[color:var(--color-black)] text-[color:var(--color-white)] relative`}
+      className={`${className} h-screen bg-[color:var(--color-black)] text-white relative`}
       id={id}
     >
       <div className="flex flex-col pl-20 pt-30 gap-10">
