@@ -84,9 +84,13 @@
 }
 
 :root {
-  --color-white: #f9f9fb;
   --color-black: #171717;
-  --color-gray-300: #202632;
+  --color-bg-100: #f8f8f8;
+  --color-bg-200: #f0f2f4;
+  --color-gray-600: #202632;
+  --color-gray-500: #171d23;
+  --color-gray-400: #434f5b;
+  --color-gray-300: #2b3541;
   --color-gray-200: #5f636d;
   --color-gray-100: #dbdbdb;
   --radius: 0.625rem;
@@ -128,7 +132,7 @@ html {
 }
 
 body {
-  background: var(--color-white);
+  background: white;
   color: var(--color-black);
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
 }

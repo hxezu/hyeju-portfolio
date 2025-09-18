@@ -31,7 +31,7 @@ export default function ProjectTumbnail({
       />
 
       <div className="relative z-10 flex w-full h-full">
-        <div className=" text-[color:var(--color-white)] flex-1 flex justify-center items-start flex-col pl-20 gap-5">
+        <div className=" text-white flex-1 flex justify-center items-start flex-col pl-20 gap-5">
           <p className="text-xs">PROJECT 0{index}</p>
           <h2 className={`text-6xl font-${font}`}>{prjName}</h2>
           <p className="text-base whitespace-pre-line font-light">

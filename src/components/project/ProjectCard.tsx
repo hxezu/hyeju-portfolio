@@ -21,7 +21,7 @@ export default function ProjectCard({
     <Link href={`/projects/${id}`}>
       <div className="relative">
         <Image src={imgSrc} alt={`${prjName} 이미지`} />
-        <div className="absolute top-6 left-10 text-[color:var(--color-white)] space-y-2">
+        <div className="absolute top-6 left-10 text-white space-y-2">
           <p className="text-xs">0{index}</p>
           <h2 className={`text-xl font-${font}`}>{prjName}</h2>
           <p className="text-xs whitespace-pre-line font-light">
