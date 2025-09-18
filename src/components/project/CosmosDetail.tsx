@@ -1,7 +1,6 @@
+import { projects } from "@/data/projects";
+import ProjectDetail from "./ProjectDetail";
+
 export default function CosmosDetail() {
-  return (
-    <>
-      <h1>CosmosDetail</h1>
-    </>
-  );
+  return <ProjectDetail project={projects.cosmos} />;
 }

@@ -1,7 +1,14 @@
 import SectionTitle from "./SectionTitle";
 import linkImg from "@/assets/icons/link.svg";
 
-export default function ProjectLinks() {
+interface ProjectLinksProps {
+  links: {
+    website?: string;
+    github?: string;
+  };
+}
+
+export default function ProjectLinks({ links }: ProjectLinksProps) {
   return (
     <div className="space-y-4">
       <SectionTitle title="프로젝트 관련 링크" icon={linkImg} />
@@ -9,7 +16,7 @@ export default function ProjectLinks() {
         <li>
           •{" "}
           <a
-            href=""
+            href={links.website}
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:font-medium"
@@ -20,7 +27,7 @@ export default function ProjectLinks() {
         <li>
           •{" "}
           <a
-            href=""
+            href={links.github}
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:font-medium"

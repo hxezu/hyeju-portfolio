@@ -1,7 +1,6 @@
+import { projects } from "@/data/projects";
+import ProjectDetail from "./ProjectDetail";
+
 export default function PortfolioDetail() {
-  return (
-    <>
-      <h1>PortfolioDetail</h1>
-    </>
-  );
+  return <ProjectDetail project={projects.portfolio} />;
 }
