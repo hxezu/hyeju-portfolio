@@ -27,7 +27,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
         <ProjectType type={project.type} />
         <ProjectLinks links={project.links} />
         <ProjectStacks stacks={project.stacks} />
-        <ProjectFeatures />
+        <ProjectFeatures id={project.id} />
       </div>
     </main>
   );

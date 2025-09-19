@@ -1,6 +1,6 @@
-import CosmosDetail from "@/components/project/CosmosDetail";
-import IttaeokDetail from "@/components/project/IttaeokDetail";
-import PortfolioDetail from "@/components/project/PortfolioDetail";
+import CosmosDetail from "@/components/project/cosmos/CosmosDetail";
+import IttaeokDetail from "@/components/project/ittaeok/IttaeokDetail";
+import PortfolioDetail from "@/components/project/portfolio/PortfolioDetail";
 
 const detailComponents: Record<string, React.ComponentType> = {
   ittaeok: IttaeokDetail,

@@ -85,6 +85,9 @@
 
 :root {
   --color-black: #171717;
+  --color-blue: #338aff;
+  --color-green: #33cc99;
+  --color-purple: #6a5acd;
   --color-bg-100: #f8f8f8;
   --color-bg-200: #f0f2f4;
   --color-gray-600: #202632;
