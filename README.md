@@ -75,3 +75,12 @@ jobs:
         run: curl -X GET https://hyeju-portfolio.onrender.com
 
 ```
+
+---
+
+### 📊 Lighthouse 점수
+
+<img width="1092" height="651" alt="Screenshot 2025-09-19 at 7 45 35 PM" src="https://github.com/user-attachments/assets/0d39de0c-ce7d-4c4c-b05e-d0c1f018421e" />
+
+- 이미지 lazy loading 적용
+- 스크롤 및 인터랙티브 애니메이션 최적화 → requestAnimationFrame 사용으로 부드러운 렌더링
