@@ -9,18 +9,15 @@ export default function Projects({
   className?: string;
 }) {
   return (
-    <section
-      id={id}
-      className={`${className} snap-y snap-mandatory overflow-y-scroll scroll-smooth h-screen`}
-    >
+    <section id={id} className={`${className} snap-y snap-mandatory`}>
       {Object.values(projects).map((project, i) => (
-        <div key={i} className="h-screen snap-start">
+        <div key={i} id={project.id} className="h-screen snap-start">
           <ProjectTumbnail
             index={i + 1}
             id={project.id}
             imgSrc={project.thumbnail}
             prjName={project.prjName}
-            description={project.description}
+            bio={project.bio}
             font={project.font}
             bg={project.background}
           />

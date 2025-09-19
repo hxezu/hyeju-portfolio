@@ -1,3 +1,5 @@
+"use client";
+import { useCursorStore } from "@/store/cursorStore";
 import SectionTitle from "./SectionTitle";
 import linkImg from "@/assets/icons/link.svg";
 
@@ -9,6 +11,7 @@ interface ProjectLinksProps {
 }
 
 export default function ProjectLinks({ links }: ProjectLinksProps) {
+  const setHovered = useCursorStore((state) => state.setHovered);
   return (
     <div className="space-y-4">
       <SectionTitle title="프로젝트 관련 링크" icon={linkImg} />
@@ -19,7 +22,9 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
             href={links.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:font-medium"
+            className="underline hover:font-medium cursor-none"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
           >
             배포 사이트
           </a>
@@ -30,7 +35,9 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
             href={links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:font-medium"
+            className="underline hover:font-medium cursor-none"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
           >
             깃허브 링크
           </a>

@@ -1,3 +1,5 @@
+"use client";
+import { useCursorStore } from "@/store/cursorStore";
 import { ArrowRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -7,7 +9,7 @@ interface ProjectTumbnailProps {
   index: number;
   imgSrc: StaticImageData;
   prjName: string;
-  description: string;
+  bio: string;
   font: string;
   bg: StaticImageData;
 }
@@ -16,10 +18,12 @@ export default function ProjectTumbnail({
   imgSrc,
   prjName,
   index,
-  description,
+  bio,
   font,
   bg,
 }: ProjectTumbnailProps) {
+  const setHovered = useCursorStore((state) => state.setHovered);
+
   return (
     <div className="relative flex h-screen w-full justify-center items-center overflow-hidden">
       <Image
@@ -34,17 +38,22 @@ export default function ProjectTumbnail({
         <div className=" text-white flex-1 flex justify-center items-start flex-col pl-20 gap-5">
           <p className="text-xs">PROJECT 0{index}</p>
           <h2 className={`text-6xl font-${font}`}>{prjName}</h2>
-          <p className="text-base whitespace-pre-line font-light">
-            {description}
-          </p>
-          <button className="flex items-center text-xs gap-1 hover-target cursor-none hover:font-semibold">
-            자세히 보기 <ArrowRight strokeWidth={1.8} size={14} />
-          </button>
+          <p className="text-base whitespace-pre-line font-light">{bio}</p>
+          <Link
+            href={`/projects/${id}`}
+            className="flex items-center text-xs gap-1 cursor-none hover:font-semibold text-shine nav-underline pb-1 px-1"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            자세히 보기
+          </Link>
         </div>
 
         <Link
           href={`/projects/${id}`}
-          className="hover-target cursor-none flex flex-1"
+          className="cursor-none flex flex-1"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
         >
           <Image src={imgSrc} alt={`${prjName} 이미지`} />
         </Link>

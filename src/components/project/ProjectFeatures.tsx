@@ -1,13 +1,27 @@
+import CosmosFeatures from "./cosmos/CosmosFeatures";
+import IttaeokFeatures from "./ittaeok/IttaeokFeatures";
+import PortfolioFeatures from "./portfolio/PortfolioFeatures";
 import SectionTitle from "./SectionTitle";
 import notebookImg from "@/assets/icons/notebook.svg";
 
-export default function ProjectFeatures() {
+const featureComponents: Record<string, React.ComponentType> = {
+  ittaeok: IttaeokFeatures,
+  cosmos: CosmosFeatures,
+  portfolio: PortfolioFeatures,
+};
+
+export default function ProjectFeatures({ id }: { id: string }) {
+  const FeatureComponent = featureComponents[id];
+
+  if (!FeatureComponent) {
+    return <div>존재하지 않는 프로젝트입니다.</div>;
+  }
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <SectionTitle title="구현한 기능" icon={notebookImg} />
-      <p className="text-[color:var(--color-gray-300)]">
-        담당 역할을 적어주세요.
-      </p>
+      <div className="w-full bg-[color:var(--color-bg-100)] flex items-start p-15 rounded-3xl">
+        <FeatureComponent />
+      </div>
     </div>
   );
 }

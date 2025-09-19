@@ -1,3 +1,4 @@
+"use client";
 import { ArrowUpRight } from "lucide-react";
 import {
   Dialog,
@@ -7,12 +8,18 @@ import {
 } from "../ui/dialog";
 import { reviews } from "@/data/reviews";
 import PeerReviewCard from "./PeerReviewCard";
+import { useCursorStore } from "@/store/cursorStore";
 
 export default function PeerReivewModal() {
+  const { setHovered } = useCursorStore();
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="hover-target cursor-none bg-[color:var(--color-black)] py-3 px-6 rounded-full text-xs flex gap-2 ">
+        <button
+          className="cursor-none bg-[color:var(--color-black)] py-3 px-6 rounded-full text-xs flex gap-2 "
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
           <p className="font-light">
             <span className="font-medium">Peer Review</span> 보기
           </p>
