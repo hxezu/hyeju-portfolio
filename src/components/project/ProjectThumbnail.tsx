@@ -41,11 +41,11 @@ export default function ProjectTumbnail({
           <p className="text-base whitespace-pre-line font-light">{bio}</p>
           <Link
             href={`/projects/${id}`}
-            className="flex items-center text-xs gap-1 cursor-none hover:font-semibold"
+            className="flex items-center text-xs gap-1 cursor-none hover:font-semibold text-shine nav-underline pb-1 px-1"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
-            자세히 보기 <ArrowRight strokeWidth={1.8} size={14} />
+            자세히 보기
           </Link>
         </div>
 
