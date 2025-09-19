@@ -16,7 +16,7 @@ export default function PeerReivewModal() {
     <Dialog>
       <DialogTrigger asChild>
         <button
-          className="cursor-none bg-[color:var(--color-black)] py-3 px-6 rounded-full text-xs flex gap-2 "
+          className="cursor-none bg-[color:var(--color-black)] py-3 px-6 rounded-full text-xs flex gap-2 shadow-2xl transform transition-transform duration-200 ease-in-out hover:scale-105"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
@@ -32,7 +32,7 @@ export default function PeerReivewModal() {
           <HaileySvg className=" w-[2000px] h-[800px] -rotate-15 overflow-visible opacity-80" />
         </div> */}
 
-        <div className="relative z-10 h-full overflow-y-auto p-10">
+        <div className="relative z-10 h-full overflow-y-auto p-10 scrollbar-hide">
           <DialogTitle></DialogTitle>
           <div className="space-y-8">
             {reviews.map((review) => (

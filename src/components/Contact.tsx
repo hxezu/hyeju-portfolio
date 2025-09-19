@@ -1,3 +1,6 @@
+"use client";
+import { useCursorStore } from "@/store/cursorStore";
+
 export default function Contact({
   id,
   className,
@@ -5,6 +8,7 @@ export default function Contact({
   id?: string;
   className?: string;
 }) {
+  const { setHovered } = useCursorStore();
   return (
     <section
       className={`${className} h-screen bg-[color:var(--color-black)] text-white relative`}
@@ -25,7 +29,14 @@ export default function Contact({
       </div>
 
       <footer className="absolute bottom-0 w-full flex justify-between px-15 py-8 text-sm text-[color:var(--color-gray-100)]">
-        <a href="mailto:hailey_apple@icloud.com">hailey_apple@icloud.com</a>
+        <a
+          href="mailto:hailey_apple@icloud.com"
+          className="cursor-none"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          hailey_apple@icloud.com
+        </a>
         <span>© Copyright 2025. hyejuhyun all rights reserved.</span>
         <span>Frontend Developer</span>
       </footer>

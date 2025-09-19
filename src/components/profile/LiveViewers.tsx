@@ -19,8 +19,10 @@ export default function LiveViewers() {
   }, []);
 
   return (
-    <div className="rounded-full border border-black px-3 py-1 flex justify-center items-center">
-      <span className="text-xs">👀 {viewers}명이 구경 중이에요!</span>
+    <div className="rounded-full border border-black px-3 py-1 flex justify-center items-center shadow-lg  animate-bounce">
+      <span className="text-xs">
+        👀 {viewers}명이 저의 포트폴리오를 구경 중이에요!
+      </span>
     </div>
   );
 }

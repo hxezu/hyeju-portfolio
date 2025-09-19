@@ -138,6 +138,10 @@ body {
   background: white;
   color: var(--color-black);
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gnb ul li a .char {
@@ -364,4 +368,8 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
   transition: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
