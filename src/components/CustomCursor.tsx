@@ -1,16 +1,30 @@
 "use client";
 import { useCursorStore } from "@/store/cursorStore";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const { hovered } = useCursorStore();
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const rafRef = useRef<number | undefined>(undefined);
+
+  const move = useCallback((e: MouseEvent) => {
+    if (rafRef.current) return;
+
+    rafRef.current = requestAnimationFrame(() => {
+      setPosition({ x: e.clientX, y: e.clientY });
+      rafRef.current = undefined;
+    });
+  }, []);
 
   useEffect(() => {
-    const move = (e: MouseEvent) => setPosition({ x: e.clientX, y: e.clientY });
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
+    window.addEventListener("mousemove", move, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", move);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, [move]);
 
   return (
     <div
@@ -22,6 +36,7 @@ export default function CustomCursor() {
           ? "translate(-50%, -50%) scale(1.8)"
           : "translate(-50%, -50%) scale(1)",
         backgroundColor: "white",
+        willChange: "transform",
       }}
     />
   );

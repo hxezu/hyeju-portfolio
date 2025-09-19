@@ -31,7 +31,7 @@ export default function ProjectTumbnail({
         alt="배경 이미지"
         fill
         className="object-cover"
-        priority
+        loading="lazy"
       />
 
       <div className="relative z-10 flex w-full h-full">
