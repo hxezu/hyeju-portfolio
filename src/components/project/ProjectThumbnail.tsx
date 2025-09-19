@@ -7,7 +7,7 @@ interface ProjectTumbnailProps {
   index: number;
   imgSrc: StaticImageData;
   prjName: string;
-  description: string;
+  bio: string;
   font: string;
   bg: StaticImageData;
 }
@@ -16,7 +16,7 @@ export default function ProjectTumbnail({
   imgSrc,
   prjName,
   index,
-  description,
+  bio,
   font,
   bg,
 }: ProjectTumbnailProps) {
@@ -34,9 +34,7 @@ export default function ProjectTumbnail({
         <div className=" text-white flex-1 flex justify-center items-start flex-col pl-20 gap-5">
           <p className="text-xs">PROJECT 0{index}</p>
           <h2 className={`text-6xl font-${font}`}>{prjName}</h2>
-          <p className="text-base whitespace-pre-line font-light">
-            {description}
-          </p>
+          <p className="text-base whitespace-pre-line font-light">{bio}</p>
           <button className="flex items-center text-xs gap-1 hover-target cursor-none hover:font-semibold">
             자세히 보기 <ArrowRight strokeWidth={1.8} size={14} />
           </button>

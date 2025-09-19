@@ -20,7 +20,7 @@ export default function Projects({
             id={project.id}
             imgSrc={project.thumbnail}
             prjName={project.prjName}
-            description={project.description}
+            bio={project.bio}
             font={project.font}
             bg={project.background}
           />
