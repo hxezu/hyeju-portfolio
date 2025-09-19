@@ -24,6 +24,7 @@ export default function ProfileInfoTools() {
             <Image
               src={tool.src}
               alt={tool.alt}
+              sizes="24"
               fill
               className="object-contain"
             />

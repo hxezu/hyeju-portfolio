@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -23,6 +22,11 @@
 @font-face {
   font-family: "Yapari";
   src: url("/fonts/YapariTrial-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/fonts/CormorantInfant-Regular.ttf") format("truetype");
 }
 
 @font-face {

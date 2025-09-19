@@ -32,6 +32,7 @@ export default function ProfileInfoSkills() {
             <Image
               src={skill.src}
               alt={skill.alt}
+              sizes="24"
               fill
               className="object-contain"
             />
