@@ -5,6 +5,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useCursorStore } from "@/store/cursorStore";
 
 function Dialog({
   ...props
@@ -54,6 +55,7 @@ function DialogContent({
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
   showCloseButton?: boolean;
 }) {
+  const { setHovered } = useCursorStore();
   return (
     <DialogPortal data-slot="dialog-portal">
       <DialogOverlay />
@@ -69,7 +71,9 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
-            className="hover-target cursor-none data-[state=open]:text-muted-foreground absolute top-6 right-6 rounded-sm transition-opacity hover:bg-[color:#f0f0f0] text-[color:var(--color-black)] hover:text-[color:var(--color-black)] focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 p-1 z-100"
+            className=" cursor-none data-[state=open]:text-muted-foreground absolute top-6 right-6 rounded-sm transition-opacity hover:bg-[color:#f0f0f0] text-[color:var(--color-black)] hover:text-[color:var(--color-black)] focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 p-1 z-100"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
           >
             <XIcon />
             <span className="sr-only">Close</span>

@@ -1,9 +1,11 @@
 "use client";
+import { useCursorStore } from "@/store/cursorStore";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import "splitting/dist/splitting.css";
 
 export default function Header() {
+  const { setHovered } = useCursorStore();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollDown, setScrollDown] = useState(false);
 
@@ -29,7 +31,12 @@ export default function Header() {
         scrollDown ? "translate-y-[-100%]" : " translate-y-0"
       }`}
     >
-      <Link href="/" className="hover-target cursor-none">
+      <Link
+        href="/"
+        className="cursor-none"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         <span className="font-cormorant">hyeju</span>Portfolio
       </Link>
 
@@ -39,7 +46,9 @@ export default function Header() {
             <li key={idx}>
               <a
                 href={`/#${item.toLowerCase()}`}
-                className="hover-target cursor-none relative inline-block overflow-hidden"
+                className="cursor-none relative inline-block overflow-hidden"
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
               >
                 {item.split("").map((char, i) => (
                   <span

@@ -1,3 +1,5 @@
+"use client";
+import { useCursorStore } from "@/store/cursorStore";
 import { ArrowRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -20,6 +22,8 @@ export default function ProjectTumbnail({
   font,
   bg,
 }: ProjectTumbnailProps) {
+  const setHovered = useCursorStore((state) => state.setHovered);
+
   return (
     <div className="relative flex h-screen w-full justify-center items-center overflow-hidden">
       <Image
@@ -35,14 +39,21 @@ export default function ProjectTumbnail({
           <p className="text-xs">PROJECT 0{index}</p>
           <h2 className={`text-6xl font-${font}`}>{prjName}</h2>
           <p className="text-base whitespace-pre-line font-light">{bio}</p>
-          <button className="flex items-center text-xs gap-1 hover-target cursor-none hover:font-semibold">
+          <Link
+            href={`/projects/${id}`}
+            className="flex items-center text-xs gap-1 cursor-none hover:font-semibold"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
             자세히 보기 <ArrowRight strokeWidth={1.8} size={14} />
-          </button>
+          </Link>
         </div>
 
         <Link
           href={`/projects/${id}`}
-          className="hover-target cursor-none flex flex-1"
+          className="cursor-none flex flex-1"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
         >
           <Image src={imgSrc} alt={`${prjName} 이미지`} />
         </Link>
