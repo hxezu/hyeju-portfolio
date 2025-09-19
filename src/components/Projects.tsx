@@ -14,7 +14,7 @@ export default function Projects({
       className={`${className} snap-y snap-mandatory overflow-y-scroll scroll-smooth h-screen`}
     >
       {Object.values(projects).map((project, i) => (
-        <div key={i} className="h-screen snap-start">
+        <div key={i} id={project.id} className="h-screen snap-start">
           <ProjectTumbnail
             index={i + 1}
             id={project.id}

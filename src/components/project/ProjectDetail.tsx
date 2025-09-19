@@ -6,6 +6,7 @@ import ProjectLinks from "./ProjectLinks";
 import ProjectPeriod from "./ProjectPeriod";
 import ProjectStacks from "./ProjectStacks";
 import ProjectType from "./ProjectType";
+import BackButton from "./BackButton";
 
 interface ProjectProps {
   project: ProjectData;
@@ -14,6 +15,7 @@ interface ProjectProps {
 export default function ProjectDetail({ project }: ProjectProps) {
   return (
     <main className="w-full pb-30">
+      <BackButton />
       <ProjectBanner
         name={project.prjName}
         bio={project.bio}
