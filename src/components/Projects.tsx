@@ -9,10 +9,7 @@ export default function Projects({
   className?: string;
 }) {
   return (
-    <section
-      id={id}
-      className={`${className} snap-y snap-mandatory overflow-y-scroll scroll-smooth h-screen`}
-    >
+    <section id={id} className={`${className} snap-y snap-mandatory`}>
       {Object.values(projects).map((project, i) => (
         <div key={i} id={project.id} className="h-screen snap-start">
           <ProjectTumbnail
