@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "FE 현혜주",
@@ -34,6 +35,7 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Header />
+        <CustomCursor />
         {children}
       </body>
     </html>
