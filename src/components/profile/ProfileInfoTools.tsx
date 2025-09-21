@@ -16,7 +16,7 @@ const tools = [
 
 export default function ProfileInfoTools() {
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-5 md:gap-10 md:flex-row flex-col">
       <ProfileDetailHeader title="TOOLS" />
       <div className="flex gap-4">
         {tools.map((tool, i) => (

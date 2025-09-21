@@ -1,5 +1,6 @@
 "use client";
 import { useCursorStore } from "@/store/cursorStore";
+import { li } from "framer-motion/client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import "splitting/dist/splitting.css";
@@ -60,6 +61,48 @@ export default function Header() {
                     {char}
                   </span>
                 ))}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <button
+        className={`cursor-none menuOpen md:hidden relative w-6 h-4 flex flex-col justify-between z-50`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <span
+          className={`block h-[2px] w-full  transition-transform  ${
+            menuOpen ? "rotate-45 translate-y-[7px] bg-black" : "bg-white"
+          }`}
+        />
+        <span
+          className={`block h-[2px] w-full  transition-transform ${
+            menuOpen ? "-rotate-45 -translate-y-[7px] bg-black" : "bg-white"
+          }`}
+        />
+      </button>
+
+      <nav
+        className={`fixed top-0 right-0 w-[60vw] h-screen bg-white text-black z-40 transition-all duration-500 overflow-hidden ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <ul className="flex flex-col items-center justify-center h-full gap-10 text-4xl">
+          {["About", "Projects", "Contact"].map((item, idx) => (
+            <li key={idx}>
+              <a
+                href={`/#${item.toLowerCase()}`}
+                className={`cursor-none ${
+                  item !== "Projects" ? "font-cormorant text-5xl" : ""
+                }`}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item}
               </a>
             </li>
           ))}

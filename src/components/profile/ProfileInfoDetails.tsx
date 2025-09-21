@@ -6,12 +6,14 @@ import ProfileInfoTools from "./ProfileInfoTools";
 
 export default function ProfileInfoDetails() {
   return (
-    <div className="w-[50%] flex-1 space-y-10">
-      <ProfileInfoContact />
-      <ProfileInfoEdu />
-      <ProfileInfoKeywords />
-      <ProfileInfoSkills />
-      <ProfileInfoTools />
+    <div className="w-full flex-1 flex flex-col justify-center items-center px-5 md:px-0">
+      <div className="space-y-10">
+        <ProfileInfoContact />
+        <ProfileInfoEdu />
+        <ProfileInfoKeywords />
+        <ProfileInfoSkills />
+        <ProfileInfoTools />
+      </div>
     </div>
   );
 }

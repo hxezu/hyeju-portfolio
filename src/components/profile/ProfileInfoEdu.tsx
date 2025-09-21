@@ -10,7 +10,7 @@ const educations = [
 
 export default function ProfileInfoEdu() {
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-5 md:gap-10 md:flex-row flex-col">
       <ProfileDetailHeader title="EDUCATION" />
       <div className="flex flex-col gap-2">
         {educations.map((education, i) => (
