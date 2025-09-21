@@ -34,10 +34,12 @@ export default function ProjectTumbnail({
         loading="lazy"
       />
 
-      <div className="relative z-10 flex w-full h-full">
-        <div className=" text-white flex-1 flex justify-center items-start flex-col pl-20 gap-5">
+      <div className="relative z-10 flex w-full h-full md:flex-row flex-col">
+        <div className=" text-white flex-1 flex justify-center items-start flex-col pl-10 md:pl-20 gap-5 pt-20 md:pt-0 z-20 ">
           <p className="text-xs">PROJECT 0{index}</p>
-          <h2 className={`text-6xl font-${font}`}>{prjName}</h2>
+          <h2 className={`text-5xl md:text-6xl lg:text-7xl font-${font}`}>
+            {prjName}
+          </h2>
           <p className="text-base whitespace-pre-line font-light">{bio}</p>
           <Link
             href={`/projects/${id}`}
@@ -51,7 +53,7 @@ export default function ProjectTumbnail({
 
         <Link
           href={`/projects/${id}`}
-          className="cursor-none flex flex-1"
+          className="cursor-none flex md:flex-1 md:py-0 py-10"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
