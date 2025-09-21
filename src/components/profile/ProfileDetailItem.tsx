@@ -49,8 +49,8 @@ export default function ProfileDetailItem({
   }
 
   return (
-    <div className="w-full flex gap-4 text-sm">
-      <h1 className="font-medium w-15 text-[color:var(--color-gray-600)] text-[14px]">
+    <div className="w-full flex gap-4 text-xs md:text-sm">
+      <h1 className="font-medium w-15 text-[color:var(--color-gray-600)] text-[12px] md:text-[14px]">
         {tag}
       </h1>
       {renderedContent}

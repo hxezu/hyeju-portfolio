@@ -5,7 +5,7 @@ export default function ProfileDetailHeader({
   title,
 }: ProfileDetailHeaderProps) {
   return (
-    <div className="w-[100px] text-lg">
+    <div className=" md:w-[100px] text-lg">
       <h1 className="font-semibold text-base">{title}</h1>
     </div>
   );

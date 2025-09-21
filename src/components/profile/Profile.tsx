@@ -12,7 +12,7 @@ export default function Profile({
   return (
     <section
       id={id}
-      className={`${className} bg-white h-screen w-full flex flex-col justify-center items-center gap-10`}
+      className={`${className} bg-white min-h-screen w-full flex flex-col justify-center items-center gap-10 py-20 md:py-0`}
     >
       <LiveViewers />
       <Banner />
