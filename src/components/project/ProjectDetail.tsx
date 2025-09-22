@@ -9,6 +9,7 @@ import ProjectStacks from "./ProjectStacks";
 import ProjectType from "./ProjectType";
 import BackButton from "./BackButton";
 import { motion } from "framer-motion";
+import ProjectTroubleShootings from "./ProjectTroubleShootings";
 
 interface ProjectProps {
   project: ProjectData;
@@ -83,6 +84,18 @@ export default function ProjectDetail({ project }: ProjectProps) {
           viewport={{ once: true, amount: 0.1 }}
         >
           <ProjectFeatures id={project.id} />
+        </motion.div>
+
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <ProjectTroubleShootings
+            theme={project.theme}
+            troubleshootings={project.troubleshootings}
+          />
         </motion.div>
       </div>
     </main>

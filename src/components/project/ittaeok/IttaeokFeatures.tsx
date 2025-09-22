@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function IttaeokFeatures() {
   return (
-    <ul className="text-[color:var(--color-gray-300)] space-y-20">
+    <ul className="text-[color:var(--color-gray-400)] space-y-20">
       <FeatureItem
         imgSrc={ittaeokFeat1}
         alt="이때어때 기능 1"
@@ -102,20 +102,20 @@ export default function IttaeokFeatures() {
           className="w-[180px] h-auto"
         />
         <div className="space-y-5">
-          <h3 className="text-[color:var(--color-gray-500)] text-xl font-bold">
+          <h3 className="text-[color:var(--color-gray-400)] text-xl font-bold">
             디자인 시스템 및
             <strong className="text-[color:var(--color-blue)] "> UI/UX </strong>
             설계 총괄
           </h3>
-          <ul className="space-y-4 font-medium text-[color:var(--color-gray-500)]">
+          <ul className="space-y-4 font-medium text-[color:var(--color-gray-400)]">
             <li>• 컴포넌트 기반 UI 디자인 시스템 구축 (톤앤매너 정립)</li>
             <li>• 반응형을 고려한 UI/UX 전반 구조 설계</li>
             <li>• 3D 시각 요소 제작 및 인터랙션 적용</li>
           </ul>
-          <h3 className="text-[color:var(--color-gray-500)] text-xl font-bold">
+          <h3 className="text-[color:var(--color-gray-400)] text-xl font-bold">
             기타
           </h3>
-          <ul className="space-y-4 font-medium text-[color:var(--color-gray-500)]">
+          <ul className="space-y-4 font-medium text-[color:var(--color-gray-400)]">
             <li>• 그룹 생성/수정/삭제 기능 구현</li>
             <li>• 개인 일정을 그룹 일정으로 이관하는 기능 로직 설계</li>
             <li>• 404 페이지 및 일정 유형 선택 페이지 구현</li>

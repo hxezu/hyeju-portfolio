@@ -19,7 +19,7 @@ export default function ProjectFeatures({ id }: { id: string }) {
   return (
     <div className="space-y-6">
       <SectionTitle title="구현한 기능" icon={notebookImg} />
-      <div className="w-full bg-[color:var(--color-bg-100)] flex items-start p-15 rounded-3xl">
+      <div className="w-full border-2 border-[color:var(--color-bg-300)] flex items-start p-15 rounded-3xl">
         <FeatureComponent />
       </div>
     </div>
