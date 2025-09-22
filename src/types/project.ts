@@ -15,6 +15,14 @@ export interface ProjectData {
     github?: string;
     website?: string;
   };
+  theme: string;
   stacks: string[];
   gradient: string;
+  troubleshootings: {
+    title: string;
+    description: string;
+    solution: string[];
+    outcome: string[];
+    learnings: string[];
+  }[];
 }

@@ -88,7 +88,7 @@ export default function CosmosFeatures() {
           className="w-[180px] h-auto"
         />
         <div className="space-y-5">
-          <h3 className="text-[color:var(--color-gray-500)] text-xl font-bold">
+          <h3 className="text-[color:var(--color-gray-400)] text-xl font-bold">
             디자인 시스템 및
             <strong className="text-[color:var(--color-green)] ">
               {" "}
@@ -96,16 +96,16 @@ export default function CosmosFeatures() {
             </strong>
             설계 총괄
           </h3>
-          <ul className="space-y-4 font-medium text-[color:var(--color-gray-500)]">
+          <ul className="space-y-4 font-medium text-[color:var(--color-gray-400)]">
             <li>
               • 컴포넌트 기반 UI 디자인 시스템 구축 및 반응형 UI/UX 전반 구조
               설계
             </li>
           </ul>
-          <h3 className="text-[color:var(--color-gray-500)] text-xl font-bold">
+          <h3 className="text-[color:var(--color-gray-400)] text-xl font-bold">
             Home 랜딩 페이지 & Contact 페이지 구현
           </h3>
-          <ul className="space-y-4 font-medium text-[color:var(--color-gray-500)]">
+          <ul className="space-y-4 font-medium text-[color:var(--color-gray-400)]">
             <li>
               • GSAP ScrollTrigger을 활용해 스크롤에 따라 인터랙션이 변화하는
               랜딩 페이지를 구성하여 몰입감 있는 사용자 경험을 제공

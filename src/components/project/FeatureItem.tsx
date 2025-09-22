@@ -21,7 +21,7 @@ export default function FeatureItem({
     <li className="flex space-x-15 items-center">
       <Image src={imgSrc} alt={alt} className="w-[180px] h-auto" />
       <div className="space-y-5">
-        <h3 className="text-[color:var(--color-gray-500)] text-xl font-bold">
+        <h3 className="text-[color:var(--color-gray-400)] text-xl font-bold">
           <strong style={{ color: `var(--color-${color})` }}>
             {highlight}
           </strong>{" "}
@@ -33,7 +33,7 @@ export default function FeatureItem({
               key={i}
               className="text-[color:var(--color-gray-200)] flex flex-col gap-1"
             >
-              <strong className="font-semibold text-[color:var(--color-gray-500)]">
+              <strong className="font-semibold text-[color:var(--color-gray-400)]">
                 • {f.subtitle}
               </strong>
               <p className="text-[14px] whitespace-pre-line leading-loose">
