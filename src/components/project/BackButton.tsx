@@ -11,7 +11,7 @@ export default function BackButton() {
   return (
     <Link
       href={`/#${name}`}
-      className="fixed bottom-20 right-10 md:right-20 2xl:right-70 z-50 flex items-center justify-center  py-2 px-4 rounded-full bg-white/20 shadow-lg backdrop-blur-md text-[color:var(--color-gray-200)] hover:bg-white/30 transition cursor-none gap-2"
+      className="fixed bottom-20 right-10 md:right-20 2xl:right-70 z-50 flex items-center justify-center  py-2 px-4 rounded-full bg-white/20 shadow-lg backdrop-blur-md text-[color:var(--color-gray-200)] hover:bg-white/30  cursor-none gap-2 hover:scale-105 transform transition-transform duration-200 ease-in-out"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

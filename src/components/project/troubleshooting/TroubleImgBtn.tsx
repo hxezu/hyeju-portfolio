@@ -8,7 +8,7 @@ export default function TroubleImgBtn({ color }: TroubleImgBtnProps) {
   return (
     <div className="w-full justify-center items-center flex">
       <button
-        className="text-white px-4 py-2 rounded-lg text-sm cursor-none"
+        className="text-white px-4 py-2 rounded-lg text-sm cursor-none hover:scale-105 transform transition-transform duration-200 ease-in-out"
         style={{ backgroundColor: `var(--color-${color})` }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
