@@ -5,7 +5,7 @@ const contacts = [
   { tag: "Email", content: "hailey_apple@icloud.com" },
   { tag: "Github", content: "https://github.com/hxezu" },
   { tag: "Velog", content: "https://velog.io/@hxezu" },
-  { tag: "Phone", content: "+82 10-5058-1366" },
+  { tag: "Phone", content: "010-5058-1366" },
 ];
 
 export default function ProfileInfoContact() {
