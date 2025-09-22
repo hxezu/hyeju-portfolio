@@ -10,7 +10,7 @@ export default function PeerReviewCard({ review }: PeerReviewCard) {
   return (
     <div
       key={review.id}
-      className="bg-white relative rounded-xl p-6 border border-black text-black space-y-2"
+      className="bg-[color:var(--color-bg-100)] relative rounded-xl p-6  text-[color:var(--color-gray-300)] space-y-2"
     >
       <Image
         alt="인용 아이콘"
