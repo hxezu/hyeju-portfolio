@@ -229,6 +229,28 @@ export const projects: Record<string, ProjectData> = {
           "전체 서비스 라이프사이클(개발→배포→운영) 경험 습득",
         ],
       },
+      {
+        title: "CustomCursor 성능 최적화",
+        description:
+          "mousemove 이벤트는 마우스가 1px 움직일 때마다 발생하여, 1초에 수백 번씩 state 업데이트(setPosition)를 유발하여 불필요한 리렌더링을 초래하고 애플리케이션에 부담을 주었습니다.",
+        solution: [
+          "requestAnimationFrame 도입: 브라우저의 렌더링 주기에 맞춰 state를 업데이트하도록 로직을 변경",
+          "requestAnimationFrame 을 통해 모니터 주사율(e.g., 60fps)에 맞춰 1초에 60번만 렌더링이 일어나도록 제어 → 불필요한 렌더링을 막고 애니메이션을 부드럽게 만듦",
+          "useCallback으로 함수 메모이제이션: move 함수를 useCallback으로 감싸 useEffect의 의존성 관리",
+          "→ 컴포넌트 리렌더링 시 불필요하게 이벤트 리스너가 해제되고 다시 등록되는 과정을 방지하여 안정성을 높임",
+        ],
+        outcome: [
+          "마우스 이동 시 렌더링 횟수: ~n00 fps → ~60 fps (약 90~95% 감소)",
+          "렌더링 지연: 8~12 ms → 2~3 ms (약 75~83% 감소)",
+          "커서 애니메이션 부드러움: 끊김 발생 → 부드러운 움직임으로 사용자 몰입감 증가",
+        ],
+        learnings: [
+          "requestAnimationFrame을 활용하면 브라우저 렌더링 주기에 맞춰 효율적으로 state 업데이트 가능",
+          "불필요한 이벤트 리스너 재등록을 방지하면 성능 안정성과 코드 유지보수성이 향상됨",
+          "성능 최적화는 UX 개선과 직결되며, 작은 디테일도 사용자 경험에 큰 영향을 줄 수 있음",
+          "React와 브라우저 이벤트를 함께 사용할 때는 렌더링 비용을 항상 고려해야 함",
+        ],
+      },
     ],
   },
 };
