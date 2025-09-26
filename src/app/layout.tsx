@@ -5,15 +5,27 @@ import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "FE 현혜주",
-  description: "프론트엔드 개발자 현혜주 포트폴리오",
+  description: "FRONTEND DEVELOPER HYEJU HYUN",
+  keywords: [
+    "Frontend",
+    "React",
+    "Next.js",
+    "포트폴리오",
+    "Frontend Developer",
+    "프론트엔드",
+  ],
+  authors: [{ name: "Hyeju Hyun", url: "https://www.hxezu.com" }],
+  creator: "Hyeju Hyun",
+  publisher: "Hyeju Hyun",
+  manifest: "/site.webmanifest",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "FE Devloper Hyeju Hyun's Portfolio",
+    title: "FRONTEND DEVELOPER HYEJU HYUN",
     description: "프론트엔드 개발자 현혜주 포트폴리오",
     url: "https://www.hxezu.com/",
-    siteName: "FE 현혜주 포트폴리오",
+    siteName: "FRONTEND DEVELOPER HYEJU HYUN",
     images: [
       {
         url: "https://www.hxezu.com/og-image.png",
